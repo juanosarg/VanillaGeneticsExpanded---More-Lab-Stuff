@@ -19,38 +19,12 @@
 		</tradeTags>
 	</ThingDef>
 	<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridBearGenesGenetrainer</defName>
+		<defName>GR_UrsineGenetrainer</defName>
 		<label>ursine genome genetrainer</label>
-		<description>Directly injects ursine genes in an humanoid. This genetrainer gives a series of abilities related to bear resilience.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
-		<graphicData>
-			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
-			<graphicClass>Graphic_Single</graphicClass>
-		</graphicData>
-		<stackLimit>1</stackLimit>
-		<tradeability>Sellable</tradeability>
-		<statBases>
-			<MarketValue>100</MarketValue>
-		</statBases>
-		<drawGUIOverlay>false</drawGUIOverlay>
-		<!--<comps>
-			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid bear genes genetrainer</useLabel>
-				<useDuration>600</useDuration>
-			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_BearHybridGenes</genes>
-			</li>
-			<li Class="CompProperties_UseEffect">
-				<compClass>CompUseEffect_DestroySelf</compClass>
-			</li>
-		</comps>-->
-	</ThingDef>
-	<!--<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridBoomalopeGenesGenetrainer</defName>
-		<label>hybrid boomalope genes genetrainer</label>
-		<description>Injects hybrid boomalope genes in an humanoid. This genetrainer gives the ability to produce chemfuel like a boomalope.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<description>Directly injects ursine genes in an humanoid. This genetrainer gives a series of health states related to bear resilience.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_UrsineGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -63,13 +37,12 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid boomalope genes genetrainer</useLabel>
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using ursine genome genetrainer</useLabel>
 				<useDuration>600</useDuration>
 			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_BoomalopeHybridGenes</genes>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_UrsineGenetrainerEffect</hediff>
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
@@ -77,9 +50,12 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridCatGenesGenetrainer</defName>
-		<label>hybrid cat genes genetrainer</label>
-		<description>Injects hybrid cat genes in an humanoid. This genetrainer gives the keen sight ability, increasing shooting accuracy.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<defName>GR_BoomGenetrainer</defName>
+		<label>boom genome genetrainer</label>
+		<description>Directly injects boom genes in an humanoid. This genetrainer gives the ability to produce chemfuel like a boomalope.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_BoomGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -92,13 +68,12 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid cat genes genetrainer</useLabel>
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using boom genome genetrainer</useLabel>
 				<useDuration>600</useDuration>
 			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_CatHybridGenes</genes>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_BoomGenetrainerEffect</hediff>
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
@@ -106,9 +81,12 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridChickenGenesGenetrainer</defName>
-		<label>hybrid chicken genes genetrainer</label>
-		<description>Injects hybrid chicken genes in an humanoid. This genetrainer gives the birdlike curiosity ability, increasing global learning speed.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<defName>GR_FelineGenetrainer</defName>
+		<label>feline genome genetrainer</label>
+		<description>Directly injects feline genes in an humanoid. This genetrainer gives the keen sight health state, increasing shooting accuracy.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_FelineGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -121,13 +99,12 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid chicken genes genetrainer</useLabel>
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using feline genome genetrainer</useLabel>
 				<useDuration>600</useDuration>
 			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_ChickenHybridGenes</genes>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_FelineGenetrainerEffect</hediff>
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
@@ -135,9 +112,12 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridMuffaloGenesGenetrainer</defName>
-		<label>hybrid muffalo genes genetrainer</label>
-		<description>Injects hybrid muffalo genes in an humanoid. This genetrainer gives the wild attunement ability, increasing plant work speed, carrying capacity, foraging and... leather amount.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<defName>GR_AvianGenetrainer</defName>
+		<label>avian genome genetrainer</label>
+		<description>Directly injects avian genes in an humanoid. This genetrainer gives the birdlike curiosity health state, increasing global learning speed.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_AvianGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -150,13 +130,12 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid muffalo genes genetrainer</useLabel>
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using avian genome genetrainer</useLabel>
 				<useDuration>600</useDuration>
 			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_MuffaloHybridGenes</genes>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_AvianGenetrainerEffect</hediff>
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
@@ -164,9 +143,12 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridRodentGenesGenetrainer</defName>
-		<label>hybrid rodent genes genetrainer</label>
-		<description>Injects hybrid rodent genes in an humanoid. This genetrainer gives the gregarious ability, increasing all social abilities.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<defName>GR_MuffaloGenetrainer</defName>
+		<label>muffalo genome genetrainer</label>
+		<description>Directly injects muffalo genes in an humanoid. This genetrainer gives the wild attunement health state, increasing plant work speed, carrying capacity, foraging and... leather amount.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_MuffaloGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -179,13 +161,12 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid rodent genes genetrainer</useLabel>
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using muffalo genome genetrainer</useLabel>
 				<useDuration>600</useDuration>
 			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_RodentHybridGenes</genes>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_MuffaloGenetrainerEffect</hediff>
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
@@ -193,9 +174,12 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridWolfGenesGenetrainer</defName>
-		<label>hybrid wolf genes genetrainer</label>
-		<description>Injects hybrid wolf genes in an humanoid. This genetrainer gives the wolf speed ability, increasing movement speed, eating speed and immunity gain speed.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<defName>GR_RodentGenetrainer</defName>
+		<label>rodent genome genetrainer</label>
+		<description>Directly injects rodent genes in an humanoid. This genetrainer gives the gregarious health state, increasing all social capacities.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_RodentGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -208,13 +192,12 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid wolf genes genetrainer</useLabel>
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using rodent genome genetrainer</useLabel>
 				<useDuration>600</useDuration>
 			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_WolfHybridGenes</genes>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_RodentGenetrainerEffect</hediff>
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
@@ -222,9 +205,12 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridReptileGenesGenetrainer</defName>
-		<label>hybrid reptile genes genetrainer</label>
-		<description>Injects hybrid reptile genes in an humanoid. This genetrainer gives the cold blood ability, making the subject more stealthy and resistant to high temperatures.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<defName>GR_CanineGenetrainer</defName>
+		<label>canine genome genetrainer</label>
+		<description>Directly injects canine genes in an humanoid. This genetrainer gives the wolf speed health state, increasing movement speed, eating speed and immunity gain speed.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_CanineGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -237,13 +223,12 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid reptile genes genetrainer</useLabel>
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using canine genome genetrainer</useLabel>
 				<useDuration>600</useDuration>
 			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_ReptileHybridGenes</genes>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_CanineGenetrainerEffect</hediff>
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
@@ -251,9 +236,12 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridInsectoidGenesGenetrainer</defName>
-		<label>hybrid insectoid genes genetrainer</label>
-		<description>Injects hybrid insectoid genes in an humanoid. This genetrainer gives the eusocial mind ability, making the subject specialized in construction and repair at the expense of plant and animal skills.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<defName>GR_ReptileGenetrainer</defName>
+		<label>reptile genome genetrainer</label>
+		<description>Directly injects reptile genes in an humanoid. This genetrainer gives the cold blood health state, making the subject more stealthy and resistant to high temperatures.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_ReptileGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -266,13 +254,12 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid insectoid genes genetrainer</useLabel>
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using reptile genome genetrainer</useLabel>
 				<useDuration>600</useDuration>
 			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_InsectoidHybridGenes</genes>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_ReptileGenetrainerEffect</hediff>
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
@@ -280,9 +267,12 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridThrumboGenesGenetrainer</defName>
-		<label>hybrid thrumbo genes genetrainer</label>
-		<description>Injects hybrid thrumbo genes in an humanoid. This genetrainer gives the animal empathy ability, making the subject much more efficient when dealing with animals.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<defName>GR_InsectoidGenetrainer</defName>
+		<label>insectoid genome genetrainer</label>
+		<description>Directly injects insectoid genes in an humanoid. This genetrainer gives the eusocial mind health state, making the subject specialized in construction and repair at the expense of plant and animal skills.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_InsectoidGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -295,13 +285,12 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid thrumbo genes genetrainer</useLabel>
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using insectoid genome genetrainer</useLabel>
 				<useDuration>600</useDuration>
 			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_ThrumboHybridGenes</genes>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_InsectoidGenetrainerEffect</hediff>
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
@@ -309,9 +298,12 @@
 		</comps>
 	</ThingDef>
 	<ThingDef ParentName="GR_GenetrainerBase">
-		<defName>GR_HybridMechanoidGenesGenetrainer</defName>
-		<label>hybrid mechanoid genes genetrainer</label>
-		<description>Injects hybrid mechanoid genes in an humanoid. This genetrainer gives the plasteel skin ability, making the subject immune to catching fire (bear in mind, fire explosions will still cause damage, but the subject will not catch fire).\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<defName>GR_EquineGenetrainer</defName>
+		<label>equine genome genetrainer</label>
+		<description>Directly injects equine genes in an humanoid. This genetrainer gives the tireless health state, making the subject need less rest.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_EquineGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
 		<graphicData>
 			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
@@ -324,17 +316,49 @@
 		<drawGUIOverlay>false</drawGUIOverlay>
 		<comps>
 			<li Class="CompProperties_Usable">
-				<useJob>GR_UseHybridInjector</useJob>
-				<useLabel>Use hybrid mechanoid genes genetrainer</useLabel>
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using equine genome genetrainer</useLabel>
 				<useDuration>600</useDuration>
 			</li>
-			<li Class="GeneticRim.CompProperties_HybridGenesUseEffect">
-				<compClass>GeneticRim.CompUseEffect_ApplyHediff</compClass>
-				<genes>GR_MechanoidHybridGenes</genes>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_EquineGenetrainerEffect</hediff>
 			</li>
 			<li Class="CompProperties_UseEffect">
 				<compClass>CompUseEffect_DestroySelf</compClass>
 			</li>
 		</comps>
-	</ThingDef>-->
+	</ThingDef>
+	<ThingDef ParentName="GR_GenetrainerBase">
+		<defName>GR_ColossalGenetrainer</defName>
+		<label>colossal genome genetrainer</label>
+		<description>Directly injects colossal genes in an humanoid. This genetrainer gives the animal empathy health state, making the subject much more efficient when dealing with animals.\n\nGenetrainers are implants that do not take the place of any given organ. Only one can be "installed" at a time. Using a second genetrainer will have no effect and the genetrainer will be wasted. Bear in mind that a genetrainer modifies the genes of the human subject, and only death will get rid of its effects.</description>
+		<descriptionHyperlinks>
+			<HediffDef>GR_ColossalGenetrainerEffect</HediffDef>
+		</descriptionHyperlinks>
+		<graphicData>
+			<texPath>Things/Item/GR_HybridGenesInjector</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<stackLimit>1</stackLimit>
+		<tradeability>Sellable</tradeability>
+		<statBases>
+			<MarketValue>100</MarketValue>
+		</statBases>
+		<drawGUIOverlay>false</drawGUIOverlay>
+		<comps>
+			<li Class="CompProperties_Usable">
+				<useJob>GR_UseGenetrainer</useJob>
+				<useLabel>Using colossal genome genetrainer</useLabel>
+				<useDuration>600</useDuration>
+			</li>
+			<li Class="GeneticRimAddOn.CompProperties_GenetrainerUseEffect">
+				<hediff>GR_ColossalGenetrainerEffect</hediff>
+			</li>
+			<li Class="CompProperties_UseEffect">
+				<compClass>CompUseEffect_DestroySelf</compClass>
+			</li>
+		</comps>
+	</ThingDef>
+	
+	
 </Defs>
