@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	
-	<HediffDef Name="GR_BoosterHybridPartsBase" Abstract="True" ParentName="AddedBodyPartBase">
-		<hediffClass>Hediff_AddedPart</hediffClass>
+	<HediffDef Name="GR_BoosterHybridPartsBase" Abstract="True">
+	<hediffClass>HediffWithComps</hediffClass>
 		<defaultLabelColor>(232, 157, 27)</defaultLabelColor>
 		<isBad>false</isBad>
 		<addedPartProps>
