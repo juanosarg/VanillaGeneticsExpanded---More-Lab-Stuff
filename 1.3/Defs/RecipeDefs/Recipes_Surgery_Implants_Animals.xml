@@ -2,12 +2,14 @@
 <Defs>
 	<!--=============== Animal Control Implant ====================-->
 	
-	<RecipeDef ParentName="GR_TorsoImplants">
+	<RecipeDef ParentName="SurgeryFlesh">
 		<defName>GR_InstallAnimalControlImplant</defName>
 		<label>&lt;color=#E89D1B&gt;install animal Implant: animal mind controller&lt;/color&gt;</label>
 		<description>Installs animal mind controller implant. This implant will allow this creature to be drafted and controlled by the player.</description>
-		<workerClass>Recipe_InstallArtificialBodyPart</workerClass>
+		<workerClass>Recipe_Surgery</workerClass>
 		<jobString>Installing animal mind controller.</jobString>		
+		<targetsBodyPart>false</targetsBodyPart>
+		<workAmount>2000</workAmount>
 		<ingredients>
 			<li>
 				<filter>
