@@ -300,9 +300,7 @@
     <Compile Include="Hediff Comps\HediffComp_Ager.cs" />
     <Compile Include="Hediff Comps\HediffComp_GenericHatcher.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <Compile Include="RecipeWorkers\RecipeWorker_AddHediff.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

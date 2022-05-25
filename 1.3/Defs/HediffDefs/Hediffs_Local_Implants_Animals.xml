@@ -11,7 +11,7 @@
 		
 	</HediffDef>
 	
-	<HediffDef ParentName="ImplantHediffBase">
+	<HediffDef ParentName="GR_BoosterHybridPartsBase">
 		<defName>GR_AnimalControlImplant</defName>
 		<label>animal controller</label>
 		<labelNoun>an animal controller</labelNoun>
@@ -21,10 +21,7 @@
 		</descriptionHyperlinks>
 		<spawnThingOnRemoved>GR_AnimalControlImplant</spawnThingOnRemoved>
 		
-		<addedPartProps>
-			<solid>true</solid>
-			<betterThanNatural>true</betterThanNatural>
-		</addedPartProps>
+		
 		<comps>
 			<li Class="AnimalBehaviours.HediffCompProperties_Draftable">
 				<makeNonFleeingToo>true</makeNonFleeingToo>
